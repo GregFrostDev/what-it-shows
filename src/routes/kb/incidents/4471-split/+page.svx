@@ -4,7 +4,7 @@ title: '#4471 is three problems, not one'
 owner: support desk
 status: proposed
 reviewed: 2026-11-10
-signature: GregFrostDev
+signature: 'v1.eyJzdWIiOiIxMjg5MiIsImF1ZCI6ImNoYWxsZW5nZTp3aGF0LWl0LXNob3dzIiwiaWF0IjoxNzk0MzM1MjY1LCJleHAiOjE3OTQ0MjE2NjV9.dHKbL5A2R-XqAX9oSHaY_89_t0viOINxa2a6JySzBJE'
 ---
 
 <script>
