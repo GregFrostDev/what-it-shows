@@ -1,0 +1,58 @@
+---
+layout: runbook
+title: '#4471 is three problems, not one'
+owner: support desk
+status: proposed
+reviewed: 2026-11-10
+signature: GregFrostDev
+---
+
+<script>
+  import ProblemSplit from '#lib/kb/ProblemSplit.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const repo = 'https://github.com/GregFrostDev/what-it-shows/issues';
+  const issues = { parser: `${repo}/1`, hint: `${repo}/2`, 'one-day': `${repo}/3` };
+</script>
+
+[#4471](/kb/incidents/4471) says "one issue, one fix queued". The desk's own code and notes say
+otherwise: the reports merged into it come from three different problems, and the queued parser fix
+covers only the first.
+
+<Callout kind="warn">
+Shipping the parser fix will not close #4471. Reports from booking-v3 forms and the one-day moves
+will keep coming.
+</Callout>
+
+## The split
+
+<ProblemSplit ticket={4471} {issues} />
+
+The table is built from `reports-4471.json` at render time. The export repeats some reports across
+pages, so rows are counted once per id.
+
+## The three problems
+
+- **`parser`**: the shared parser reads dates month first, and every tenant on file writes the day
+  first. Day and month swap: "Our 7 April reminder went out on 4 July."
+- **`hint`**: the booking-v3 form prints `MM/DD/YYYY` under its date field. People at day-first
+  tenants type what the hint says, and the form reads it the tenant's way. Fixing the parser does not
+  touch this.
+- **`one-day`**: the date moves by one day, not by a swap. "Tuesday 6 October showed as Monday",
+  and one meeting landed on Tuesday in Lisbon and Monday in Toronto. That points to time zones. The
+  desk already listed these reports in `desk-notes.json`; the #4471 page still files them under
+  `parser` with a footnote.
+
+## Why they were merged
+
+[Decision 0001](/kb/decisions/0001-dedupe-by-subject) merges on the subject line, and these reports
+share a handful of subjects. A subject says what the reporter saw, not what broke. Intake tags follow
+the reporter's browser, not the tenant, so they disagree with the cause too.
+
+## What to do
+
+- Keep #4471 for `parser`, and track `hint` and `one-day` as their own tickets.
+- When a big ticket gets a fix queued, check whether every report in it would be closed by that fix.
+
+<RenderStamp {signature} />
