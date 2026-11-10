@@ -29,7 +29,7 @@
     {#each split.groups as g (g.problem)}
       <tr>
         <td><code>{g.problem}</code></td>
-        <td>{g.reports.length}</td>
+        <td>{g.reports.length}{#if g.within}<span class="in"> (inside <code>{g.within}</code>)</span>{/if}</td>
         <td>{g.tenants}</td>
         <td>{g.firstSeen} → {g.lastSeen}</td>
         <td class="tags">{tags(g.taggedAs)}</td>
@@ -41,5 +41,6 @@
 
 <style>
   .sum { font-size: 1.1rem; }
+  .in { color: var(--muted); font-size: 0.85em; }
   .tags { color: var(--muted); font-size: 0.85em; }
 </style>

@@ -30,7 +30,8 @@ will keep coming.
 <ProblemSplit ticket={4471} {issues} />
 
 The table is built from `reports-4471.json` at render time. The export repeats some reports across
-pages, so rows are counted once per id.
+pages, so rows are counted once per id. Counts follow the desk's own view: each report sits under its
+cause by tenant, so the `one-day` reports are also counted inside `parser`.
 
 ## The three problems
 
