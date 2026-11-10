@@ -16,13 +16,14 @@ signature: GregFrostDev
   const issues = { parser: `${repo}/1`, hint: `${repo}/2`, 'one-day': `${repo}/3` };
 </script>
 
-[#4471](/kb/incidents/4471) says "one issue, one fix queued". The desk's own code and notes say
-otherwise: the reports merged into it come from three different problems, and the queued parser fix
-covers only the first.
+[#4471](/kb/incidents/4471) said "one issue, one fix queued". The desk's own code and notes say
+otherwise: the reports merged into it come from three different problems, and the parser fix covers
+only the first.
 
 <Callout kind="warn">
-Shipping the parser fix will not close #4471. Reports from booking-v3 forms and the one-day moves
-will keep coming.
+Engineering update, 5 October: #4471 is closed. `parser` is fixed (`fix(dates): parse dd/mm for eu
+locales`). `hint` is won't fix: the booking-v3 form is retired. The update does not cover `one-day`,
+so that ticket stays open.
 </Callout>
 
 ## The split
@@ -51,9 +52,14 @@ cause by tenant, so the `one-day` reports are also counted inside `parser`.
 share a handful of subjects. A subject says what the reporter saw, not what broke. Intake tags follow
 the reporter's browser, not the tenant, so they disagree with the cause too.
 
-## What to do
+## Where each problem stands
 
-- Keep #4471 for `parser`, and track `hint` and `one-day` as their own tickets.
-- When a big ticket gets a fix queued, check whether every report in it would be closed by that fix.
+- **`parser`**: fixed by `fix(dates): parse dd/mm for eu locales`. Ticket closed.
+- **`hint`**: won't fix. The booking-v3 form is retired, so its hint reaches nobody. Ticket closed.
+- **`one-day`**: open. Neither change touches time zones, so these reports will keep coming.
+
+## Lesson
+
+When a big ticket closes, check whether every report in it is closed by that fix.
 
 <RenderStamp {signature} />

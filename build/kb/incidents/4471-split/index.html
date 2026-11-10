@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.BYZvXBE_.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.HptNBF7F.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/fruYDLqp.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/CsoOnzYK.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/i8GeAw__.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/Cbdj2qAo.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.DYQOlaXP.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.CfkrDKaJ.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BkYfdh9H.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BD3UdjSR.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/wnmzq4eU.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/TGQFHf5e.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.uZkZF3HD.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/ybC49tkz.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.CnxGB0M-.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/C-sll53n.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.azI9lZu5.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/C2Jpvlk5.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DFPV7QJw.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BxbUfnXU.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/iXLSwIXB.js" rel="modulepreload">
@@ -25,10 +25,11 @@
 		<link href="../../../_app/immutable/assets/5.DhALneYM.css" rel="stylesheet">
   </head>
   <body data-sveltekit-preload-data="hover">
-    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 is three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-11-10 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> says “one issue, one fix queued”. The desk’s own code and notes say
-otherwise: the reports merged into it come from three different problems, and the queued parser fix
-covers only the first.</p> <aside class="warn svelte-17bri61"><!---->Shipping the parser fix will not close #4471. Reports from booking-v3 forms and the one-day moves
-will keep coming.<!----></aside><!----> <h2>The split</h2> <p class="sum svelte-h3x27m"><strong>412</strong> unique reports in #4471 (15 duplicate rows from
+    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 is three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-11-10 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> said “one issue, one fix queued”. The desk’s own code and notes say
+otherwise: the reports merged into it come from three different problems, and the parser fix covers
+only the first.</p> <aside class="warn svelte-17bri61"><!---->Engineering update, 5 October: #4471 is closed. `parser` is fixed (`fix(dates): parse dd/mm for eu
+locales`). `hint` is won't fix: the booking-v3 form is retired. The update does not cover `one-day`,
+so that ticket stays open.<!----></aside><!----> <h2>The split</h2> <p class="sum svelte-h3x27m"><strong>412</strong> unique reports in #4471 (15 duplicate rows from
   the export dropped) · <strong>3</strong> problems</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th><th>intake tagged</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>379<!--[-1--><!--]--></td><td>11</td><td>2026-04-01 → 2026-10-04</td><td class="tags svelte-h3x27m">parser ×356 · hint ×23</td><td><!--[0--><a href="https://github.com/GregFrostDev/what-it-shows/issues/1">#1</a><!--]--></td></tr><tr><td><code>hint</code></td><td>33<!--[-1--><!--]--></td><td>3</td><td>2026-04-17 → 2026-09-22</td><td class="tags svelte-h3x27m">hint ×18 · parser ×15</td><td><!--[0--><a href="https://github.com/GregFrostDev/what-it-shows/issues/2">#2</a><!--]--></td></tr><tr><td><code>one-day</code></td><td>5<!--[0--><span class="in svelte-h3x27m">(inside <code>parser</code>)</span><!--]--></td><td>5</td><td>2026-04-02 → 2026-10-04</td><td class="tags svelte-h3x27m">parser ×5</td><td><!--[0--><a href="https://github.com/GregFrostDev/what-it-shows/issues/3">#3</a><!--]--></td></tr><!--]--></tbody></table><!----> <p>The table is built from <code>reports-4471.json</code> at render time. The export repeats some reports across
 pages, so rows are counted once per id. Counts follow the desk’s own view: each report sits under its
 cause by tenant, so the <code>one-day</code> reports are also counted inside <code>parser</code>.</p> <h2>The three problems</h2> <ul><li><strong><code>parser</code></strong>: the shared parser reads dates month first, and every tenant on file writes the day
@@ -38,19 +39,19 @@ touch this.</li> <li><strong><code>one-day</code></strong>: the date moves by on
 and one meeting landed on Tuesday in Lisbon and Monday in Toronto. That points to time zones. The
 desk already listed these reports in <code>desk-notes.json</code>; the #4471 page still files them under <code>parser</code> with a footnote.</li></ul> <h2>Why they were merged</h2> <p><a href="/kb/decisions/0001-dedupe-by-subject">Decision 0001</a> merges on the subject line, and these reports
 share a handful of subjects. A subject says what the reporter saw, not what broke. Intake tags follow
-the reporter’s browser, not the tenant, so they disagree with the cause too.</p> <h2>What to do</h2> <ul><li>Keep #4471 for <code>parser</code>, and track <code>hint</code> and <code>one-day</code> as their own tickets.</li> <li>When a big ticket gets a fix queued, check whether every report in it would be closed by that fix.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-YS85-Z9B1</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+the reporter’s browser, not the tenant, so they disagree with the cause too.</p> <h2>Where each problem stands</h2> <ul><li><strong><code>parser</code></strong>: fixed by <code>fix(dates): parse dd/mm for eu locales</code>. Ticket closed.</li> <li><strong><code>hint</code></strong>: won’t fix. The booking-v3 form is retired, so its hint reaches nobody. Ticket closed.</li> <li><strong><code>one-day</code></strong>: open. Neither change touches time zones, so these reports will keep coming.</li></ul> <h2>Lesson</h2> <p>When a big ticket closes, check whether every report in it is closed by that fix.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-YS85-Z9B1</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1jdrexk = {
+					__sveltekit_i7r82j = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.BYZvXBE_.js"),
-						import("../../../_app/immutable/entry/app.DYQOlaXP.js")
+						import("../../../_app/immutable/entry/start.HptNBF7F.js"),
+						import("../../../_app/immutable/entry/app.CfkrDKaJ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
